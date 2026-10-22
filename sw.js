@@ -1,21 +1,21 @@
 /* Chess.MAS service worker — makes the app work offline after the first visit. */
-var CACHE = 'chess-mas-v3.0.0';
+var CACHE = 'chess-mas-v3.0.1';
 var SHELL = [
   './',
   './index.html',
-  './css/styles.css',
-  './js/chess.min.js',
-  './js/pieces.js',
-  './js/book.js',
-  './js/engine.js',
-  './js/app.js',
-  './assets/logo.png',
-  './assets/photo-buet.jpg',
-  './assets/photo-portrait.jpg',
-  './icons/icon-192.png',
-  './icons/icon-512.png',
-  './icons/icon-maskable-512.png',
-  './icons/apple-touch-icon.png',
+  './styles.css',
+  './chess.min.js',
+  './pieces.js',
+  './book.js',
+  './engine.js',
+  './app.js',
+  './logo.png',
+  './photo-buet.jpg',
+  './photo-portrait.jpg',
+  './icon-192.png',
+  './icon-512.png',
+  './icon-maskable-512.png',
+  './apple-touch-icon.png',
   './manifest.webmanifest'
 ];
 var FONT_HOSTS = ['fonts.googleapis.com', 'fonts.gstatic.com'];

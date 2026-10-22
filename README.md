@@ -2,7 +2,7 @@
 
 Play chess against a seven-level bot, track your rating, and review every game — in any browser, and offline once installed. Free and open source by **MAS Studio**.
 
-<p align="center"><img src="icons/icon-192.png" width="96" alt="Chess.MAS logo"></p>
+<p align="center"><img src="icon-192.png" width="96" alt="Chess.MAS logo"></p>
 
 ## Features
 
@@ -30,7 +30,7 @@ python3 -m http.server 8000
 ## Publish on GitHub Pages
 
 1. **Create the repository.** Sign in at <https://github.com/Al-Shahriar-12>, click **New**, name it `chess-mas`, keep it **Public**, and leave "Add a README" unticked. Click **Create repository**.
-2. **Upload the files.** On the new repository page click **uploading an existing file**. Drag in everything *inside* the `chess-mas` folder (`index.html`, `css/`, `js/`, `assets/`, `icons/`, `sw.js`, `manifest.webmanifest`, `README.md`, `LICENSE`, `CREDITS.md`, `.nojekyll`). `index.html` must sit at the top level of the repo, not inside a sub-folder. Write a message such as "Chess.MAS v3.0" and click **Commit changes**.
+2. **Upload the files.** On the new repository page click **uploading an existing file**. Open the `chess-mas` folder, select **all** the files inside it (Ctrl+A / Cmd+A) and drag them in. Every file sits at the top level, so there are no sub-folders to lose. Write a message such as "Chess.MAS v3.0" and click **Commit changes**.
    - Hidden file tip: if your computer hides `.nojekyll`, it's fine to skip it; the site still works.
    - Prefer the command line? From inside the folder:
      ```bash
@@ -48,21 +48,21 @@ python3 -m http.server 8000
 
 ### Updating later
 
-Upload the changed files again (same names) and commit. Then open `sw.js`, bump `CACHE = 'chess-mas-v3.0.0'` to a new version (for example `v3.0.1`) and commit it too, so installed copies pick up the update.
+Upload the changed files again (same names) and commit. Then open `sw.js`, bump `CACHE = 'chess-mas-v3.0.1'` to a new version (for example `v3.0.2`) and commit it too, so installed copies pick up the update.
 
 ## Project layout
 
 ```
-chess-mas/
+chess-mas/                  (every file sits at the top level)
 ├── index.html              app shell
-├── css/styles.css          all styles (themes, boards, layout)
-├── js/chess.min.js         chess.js 0.12.0 — rules
-├── js/engine.js            MAS Engine — search + evaluation (Web Worker)
-├── js/book.js              opening book
-├── js/pieces.js            the 4 piece sets as SVG data
-├── js/app.js               board, clocks, bot, review, PDF, screens
-├── assets/                 logo and photos
-├── icons/                  PWA icons
+├── styles.css              all styles (themes, boards, layout)
+├── chess.min.js            chess.js 0.12.0 — rules
+├── engine.js               MAS Engine — search + evaluation (Web Worker)
+├── book.js                 opening book
+├── pieces.js               the 4 piece sets as SVG data
+├── app.js                  board, clocks, bot, review, PDF, screens
+├── logo.png, photo-*.jpg   logo and photos
+├── icon-*.png              PWA icons
 ├── manifest.webmanifest    install metadata
 ├── sw.js                   offline cache
 ├── LICENSE                 MIT
